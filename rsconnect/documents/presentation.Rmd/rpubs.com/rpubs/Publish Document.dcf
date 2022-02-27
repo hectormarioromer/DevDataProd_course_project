@@ -1,0 +1,11 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/871247/0f12435d56e5479a9a4e82f1f57a4ec1
+bundleId: https://api.rpubs.com/api/v1/document/871247/0f12435d56e5479a9a4e82f1f57a4ec1
+url: http://rpubs.com/hectormarioromer/871247
+when: 1645930756.16663
+lastSyncTime: 1645930756.16665

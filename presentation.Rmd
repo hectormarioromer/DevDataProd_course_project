@@ -52,4 +52,9 @@ p <- ggplot(data = info, aes(x = carat, y = price)) +
 p
 ```
 
+## Final words
+
+Use the controls on the left to tweak the plot. Move the carat slider to get a prediction for the diamond price. The app will automatically react to your inputs.
+
+
 Enjoy!!!

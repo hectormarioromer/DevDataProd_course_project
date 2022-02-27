@@ -4,10 +4,10 @@ username:
 account: hectormarioromer
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 5741042
-bundleId: 5621740
+appId: 5741079
+bundleId: 5621828
 url: https://hectormarioromer.shinyapps.io/Diamonds/
-when: 1645928312.47917
-lastSyncTime: 1645928312.47919
+when: 1645931381.01237
+lastSyncTime: 1645931381.0124
 asMultiple: FALSE
 asStatic: FALSE

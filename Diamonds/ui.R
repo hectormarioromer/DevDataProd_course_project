@@ -9,12 +9,15 @@
 
 library(shiny)
 library(bslib)
+library(ggplot2)
+data("diamonds")
 
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
         # Application theme
         theme = bs_theme(version = 4, bootswatch = "lumen"),
-
+        
+        titlePanel("Diamond price predictor"),
         # Sidebar with a slider input for number of bins
         sidebarLayout(
                 sidebarPanel(
