@@ -16,7 +16,7 @@ shinyServer(function(input, output) {
 
         data("diamonds")
         output$distPlot <- renderPlot({
-                ## Filters data using inputs
+                ## Filter data using inputs
                 info <- diamonds %>% filter(cut == input$cut,
                                                 color == input$color,
                                                 clarity == input$clarity)
@@ -30,4 +30,12 @@ shinyServer(function(input, output) {
                 p
                 
         }, height = 500)
+        
+        output$predict <- renderPrint({
+                ## Filter data using inputs
+                info <- diamonds %>% filter(cut == input$cut,
+                                            color == input$color,
+                                            clarity == input$clarity)
+                fit <- lm(price~carat,data=info)
+                unname(predict(fit, data.frame(carat = input$lm)))})
 })

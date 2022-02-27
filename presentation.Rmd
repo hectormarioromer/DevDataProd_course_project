@@ -1,0 +1,55 @@
+---
+title: "Diamond prices"
+author: "Hector Mario Romer"
+date: '2022-02-26'
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Overview
+
+Diamonds prices depend on their weight, measured in carats. But carats are not the only factor in pricing. Prices also depend on:
+
+- Cut: quality of the diamond from best to worst (Ideal, Premium, Very Good, Good, Fair)
+- Color: best(D) to worst(J)
+- Clarity: measures how clear the diamond is from best to worst (IF, VVS2, VVS1, VS2, VS1, SI2, SI1, I1)
+
+This application predicts diamond prices based on input values.
+
+## Summary
+
+The "diamonds" dataset is found in the ggplot2 R package. It contains almost 54,000 observations (diamonds). 
+```{r include=FALSE}
+library(ggplot2)
+library(dplyr)
+data(diamonds)
+dim(diamonds)
+```
+
+Let's take a look at following table. It shows the amounts of diamonds per cut and color
+
+```{r}
+table(diamonds$cut, diamonds$color)
+```
+
+
+## Plot
+
+The application will allow you to tweak the following plot:
+
+```{r plot, echo = FALSE}
+info <- diamonds %>% filter(cut == "Ideal", color == "D", clarity == "IF")
+p <- ggplot(data = info, aes(x = carat, y = price)) +
+        theme_bw() +
+        geom_point() +
+        geom_smooth(formula = y ~ x, method = "lm") +
+        labs(title = "Diamond Prices (in US dollars)",
+             xlab = "Carat", ylab = "Price")
+        
+p
+```
+
+Enjoy!!!
